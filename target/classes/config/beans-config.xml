@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+		
+		<bean id="bulletinDao" class="com.paie.mvc.dao.impl.BulletinDaoImpl" /> 
+		<bean id="bulletinService" class="com.paie.mvc.services.Impl.BulletinServiceImpl" > 	
+			<property name="dao" ref="bulletinDao"></property>
+		</bean>
+		<bean id="contratDao" class="com.paie.mvc.dao.impl.ContratDaoImpl" /> 
+		<bean id="contratService" class="com.paie.mvc.services.Impl.ContratServiceImpl" > 	
+			<property name="dao" ref="contratDao"></property>
+		</bean>
+		<bean id="departementDao" class="com.paie.mvc.dao.impl.DepartementDaoImpl" /> 
+		<bean id="departementService" class="com.paie.mvc.services.Impl.DepartementServiceImpl" > 	
+			<property name="dao" ref="departementDao"></property>
+		</bean>		
+		<bean id="employeDao" class="com.paie.mvc.dao.impl.EmployeDaoImpl" /> 
+		<bean id="employeService" class="com.paie.mvc.services.Impl.EmployeServiceImpl" > 	
+			<property name="dao" ref="employeDao"></property>
+		</bean>
+		<bean id="salaireDao" class="com.paie.mvc.dao.impl.SalaireDaoImpl" /> 
+		<bean id="salaireService" class="com.paie.mvc.services.Impl.SalaireServiceImpl" > 	
+			<property name="dao" ref="salaireDao"></property>
+		</bean>	
+		<bean id="utilisateurDao" class="com.paie.mvc.dao.impl.UtilisateurDaoImpl" /> 
+		<bean id="utilisateurService" class="com.paie.mvc.services.Impl.UtilisateurServiceImpl" > 	
+			<property name="dao" ref="utilisateurDao"></property>
+		</bean>	
+		<bean id="flickerDao" class="com.paie.mvc.dao.impl.FlickerDaoImpl" /> 
+		<bean id="flickerService" class="com.paie.mvc.services.Impl.FlickerServiceImpl" > 	
+			<property name="dao" ref="flickerDao"></property>
+		</bean>	
+		<bean id="lieu_affectationDao" class="com.paie.mvc.dao.impl.Lieu_affectationDaoImpl" /> 
+		<bean id="lieu_affectationService" class="com.paie.mvc.services.Impl.Lieu_affectationServiceImpl" > 	
+			<property name="dao" ref="lieu_affectationDao"></property>
+		</bean>	
+		<bean id="prestationDao" class="com.paie.mvc.dao.impl.PrestationDaoImpl" /> 
+		<bean id="prestationService" class="com.paie.mvc.services.Impl.PrestationServiceImpl" > 	
+			<property name="dao" ref="prestationDao"></property>
+		</bean>	
+		<bean id="rolesDao" class="com.paie.mvc.dao.impl.RolesDaoImpl" /> 
+		<bean id="rolesService" class="com.paie.mvc.services.Impl.RolesServiceImpl" > 	
+			<property name="dao" ref="rolesDao"></property>
+		</bean>
+</beans>
