@@ -242,13 +242,13 @@
        <div class="panel-body">
         <div class="form-group">
          <label><fmt:message code="common.inss" /></label>
-         <f:input path="inss" name="inss"  id="inss" class="form-control"  readonly="true" />
+         <f:input path="inss" name="inss"  id="inss" class="form-control"   />
          
         </div>
         
         <div class="form-group">
          <label><fmt:message code="common.ipr" /></label>
-         <f:input path="retenu" name="retenu"  id="retenu" class="form-control" readonly="true" />
+         <f:input path="retenu" name="retenu"  id="retenu" class="form-control"  />
         </div>
         <br />
         <div align="center">

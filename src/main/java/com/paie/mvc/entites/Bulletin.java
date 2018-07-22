@@ -110,7 +110,8 @@ public class Bulletin implements Serializable{
 		if(!salaires.isEmpty()) {
 			BigDecimal totalLigne=BigDecimal.ZERO;
 			for(Salaire salaire:salaires) {
-				totalLigne =totalLigne.add(salaire.getTotalSalaire());
+				//totalLigne =totalLigne.add(salaire.getTotalSalaire());
+				totalLigne=totalLigne.add(BigDecimal.valueOf(salaire.getEmploye().getHeureSuppl(salaire.getPeriode())).multiply(salaire.getEmploye().getContrats().getSalaireBase())).add(salaire.getTotalSalaire().add(salaire.getTotalAvantage())).subtract(salaire.getTotalSoncial().add(salaire.getAutres()));
 			}
 			totalBulletin=totalLigne;
 		}

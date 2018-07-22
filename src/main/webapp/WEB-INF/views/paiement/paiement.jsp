@@ -91,6 +91,7 @@
                                         <th><fmt:message code="deduction.det" />&nbsp;($)</th>
                                         <th><fmt:message code="reduction.det" />&nbsp;($)</th>
                                         <th><fmt:message code="common.heureS" />&nbsp;($)</th>
+                                        <th>Total&nbsp;($)</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -100,11 +101,12 @@
                                 		<td>${salaire.getCodeSalaire()}</td>
                                         <td>${salaire.getEmploye().getNomEmpl()}</td>
                                         <td>${salaire.getEmploye().getContrats().getSalaireBase()}</td>
-                                        <td>${salaire.getTotalSalaire()}</td>
+                                        <td>${salaire.getTotalSalaire()-(salaire.getEmploye().getHeureSuppl(salaire.getPeriode())*salaire.getEmploye().getContrats().getSalaireBase())}</td>
                                         <td>${salaire.getTotalAvantage()}</td>
                                         <td>${- salaire.getTotalSoncial()}</td>
                                         <td>${salaire.getAutres()}</td>
                                         <td>${salaire.getEmploye().getHeureSuppl(salaire.getPeriode())*salaire.getEmploye().getContrats().getSalaireBase()}</td>
+                                        <td>${salaire.getEmploye().getHeureSuppl(salaire.getPeriode())*salaire.getEmploye().getContrats().getSalaireBase()+salaire.getTotalSalaire()+salaire.getTotalAvantage()-(salaire.getTotalSoncial()+salaire.getAutres())}</td>
                                         <td></td>
                                         <td class="center">
                                         	<c:url value="/paie/paiement/modifier/${salaire. getIdSalaire() }" var="lienModifier" />

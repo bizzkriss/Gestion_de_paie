@@ -144,13 +144,13 @@ public class Salaire implements Serializable{
 		return inss;
 	}
 	public void setInss(BigDecimal inss) {
-		this.inss = employe.getContrats().getSalaireBase().multiply(BigDecimal.valueOf(employe.getHeurePreste(periode))).multiply(BigDecimal.valueOf(0.035));
+		this.inss = inss;
 	}
 	public BigDecimal getRetenu() {
 		return retenu;
 	}
 	public void setRetenu(BigDecimal retenu) {
-		this.retenu = employe.getContrats().getSalaireBase().multiply(BigDecimal.valueOf(employe.getHeurePreste(periode))).multiply(BigDecimal.valueOf(0.05));
+		this.retenu = retenu;
 	}
 	public BigDecimal getAvance() {
 		return avance;

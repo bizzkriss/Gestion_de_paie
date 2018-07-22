@@ -12,10 +12,10 @@
 			<property name="driverClassName" value="com.mysql.jdbc.Driver">
 			</property>
 			<property name="url"
-				value="jdbc:mysql://https://node74652-gepaieapp.whelastic.net:3306/gestionPaie?createDatabaseIfNotExist=true">
+				value="jdbc:mysql://localhost:3306/gestionPaie?createDatabaseIfNotExist=true">
 			</property>
 			<property name="username" value="root"></property>
-			<property name="password" value="yU56BSqB8C"></property>
+			<property name="password" value=""></property>
 		</bean>
 
 		<bean id="persistenceUnitManger"
