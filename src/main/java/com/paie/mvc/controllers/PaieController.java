@@ -164,7 +164,7 @@ public class PaieController {
 				JasperExportManager.exportReportToPdfStream(jasperPrint, outputstream );
 				
 			}catch(JRException ex) {
-				
+				ex.printStackTrace();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

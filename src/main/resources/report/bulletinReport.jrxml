@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="bulletinReport" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="30a4a4b4-aa9b-4e22-86ef-96dd234f26eb">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="59"/>
+	<field name="codeSalaire" class="java.lang.String"/>
+	<field name="employe.nomEmpl" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="136" y="15" width="100" height="20" uuid="f640889f-0070-4be8-b3db-af3effc151b3"/>
+				<textFieldExpression><![CDATA[$F{employe.nomEmpl}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="123" y="0" width="100" height="20" uuid="b524b7d0-996c-4619-864b-e3ef5eb4c6da"/>
+				<textFieldExpression><![CDATA[$F{codeSalaire}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
